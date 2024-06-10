@@ -13,11 +13,15 @@ const person = {
 //2. key가 문자인지 확인하기
 //3.해당 키값을 가지고 있는지 확인하기
 
+function isObject(data){
+  return Object.prototype.toString.call(data).slice(8,-1).toLowerCase() === 'object'
+}
+
 function getValueAtObject(obj, key) {
   if(typeof key !== 'string'){
     throw new TypeError('getValueAtObject 함수의 두번째 인수는 문자 타입이어야 합니다');
   }
-  if(typeof obj === 'object'){
+  if(isObject(obj)){
     if(Object.prototype.hasOwnProperty.call(obj,key)){
       return obj[key];
     }else{
