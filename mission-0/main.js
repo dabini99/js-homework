@@ -4,21 +4,24 @@
 
 //**설명:** 객체와 키를 인수로 받아, 객체에 해당 키가 존재하면 그 키에 해당하는 값을 반환하고, 존재하지 않으면 에러를 발생시키는 함수를 작성하세요.
 
-
-function getValueAtObject(obj, key) {
-  if(obj.hasOwnProperty(key)){
-    return obj[key];
-  }else{
-    throw new Error('Error!');
-  }
-}
-
-//예시
 const person = {
   name: 'Alice',
   age: 25,
   city: 'Wonderland'
 };
+//1. obj가 객체인지 확인하기
+//2. key가 문자인지 확인하기
+function getValueAtObject(obj, key) {
+  if(typeof key !== 'string'){
+    throw new TypeError('getValueAtObject 함수의 두번째 인수는 문자 타입이어야 합니다');
+  }
+  if(typeof obj === 'object'){
+    return obj[key];
+  }else{
+    throw new TypeError('getValueAtObject 함수의 첫번째 인수는 객체 타입이어야 합니다');
+  }
+}
+
 
 console.log(getValueAtObject(person, 'name')); // 'Alice'
 console.log(getValueAtObject(person, 'age'));  // 25
