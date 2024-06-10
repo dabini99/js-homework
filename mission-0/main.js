@@ -43,16 +43,18 @@ console.log(getValueAtObject(person, 'country')); // Error !
 /**설명:** 배열과 인덱스를 인수로 받아, 인덱스가 배열의 유효한 범위 내에 있으면 그 인덱스에 해당하는 값을 반환하고, 
 유효하지 않은 인덱스일 경우 에러 메시지를 반환하는 함수를 작성하세요.*/
 
+const numbers = [10, 20, 30, 40, 50];
+//1.arr변수가 배열인지 확인하기 Array.isArray함수를 사용해서
+
 function getNumberAtArray(arr, index) {
-  if(arr.length == index){
+  if(Array.isArray(arr)){
     return arr.length;
   }else{
-    throw new Error('Error!');
+    throw new TypeError('getValueAtObject 함수의 첫번째 인수는 배열 타입이어야 합니다');
   }
 }
 
-//예시
-const numbers = [10, 20, 30, 40, 50];
+
 
 console.log(getNumberAtArray(numbers, 2)); // 30
 console.log(getNumberAtArray(numbers, 4)); // 50
