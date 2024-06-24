@@ -35,7 +35,7 @@ let pwCheckPass = false;
 function handleEmailCheck(){
   const value = this.vlaue;
   if(emailReg(value)){
-    this.classList.remove('is--invlid');
+    this.classList.remove('is--invalid');
     emailCheckPass = true;
   }else{
     this.classList.add('is--invalid');
@@ -46,7 +46,7 @@ function handleEmailCheck(){
 function handlePasswordCheck(){
   const value = this.vlaue;
   if(pwReg(value)){
-    this.classList.remove('is--invlid');
+    this.classList.remove('is--invalid');
     pwCheckPass = true;
   }else{
     this.classList.add('is--invalid');
