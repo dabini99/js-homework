@@ -36,3 +36,4 @@ target.classList.add('is-active');로 is-active를 넣어줬다
 remove로 빼줘야하는데 li전부를 잡고 remove로 빼줘야한다
 근데 안빠진다 왜? 몰라
 
+<img src="./mission-02.png">
