@@ -37,3 +37,4 @@ remove로 빼줘야하는데 li전부를 잡고 remove로 빼줘야한다
 근데 안빠진다 왜? 몰라
 
 <img src="./client/mission-02.png">
+<img src="./client/elemental.gif">
