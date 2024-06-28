@@ -1,5 +1,7 @@
 ## Elemental 포스터 만들기!
 
+[완성페이지](https://dabini99.github.io/js-homework/mission-02/client/)
+
 썸네일 이미지를 클릭하면 메인 이미지와 배경이 바뀔 수 있도록 코드 로직을 작성해주세요.
 
 1. 클릭이벤트 활성화
